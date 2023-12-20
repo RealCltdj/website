@@ -1,13 +1,17 @@
-name: Build Vue
-on:
+name: Build and Deploy Vue Application to Github Pages
+on: 
   push:
     branches:
     - main
 jobs:
-  build_vue:
+  build_deploy_vue:
     runs-on: ubuntu-latest
+    name: Build and Deploy Vue
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-      - run: chmod +x ./commit-repo.sh
-      - run: ./commit-repo.sh ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v2
+    - id: Build-Deploy-Vue
+      uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
+      with:
+        username: RealCltdj
+        reponame: website
+        token: ${{ secrets.GITHUB_TOKEN }} # no need to change this line this is used to create the branch in your application repository
