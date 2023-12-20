@@ -9,7 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
       - run: chmod +x ./commit-repo.sh
       - run: ./commit-repo.sh ${{ secrets.GITHUB_TOKEN }}
