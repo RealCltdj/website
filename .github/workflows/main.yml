@@ -16,3 +16,5 @@ jobs:
         reponame: website
         token: ${{ secrets.GITHUB_TOKEN }} # no need to change this line this is used to create the branch in your application repository
         email: cltdjgaming@gmail.com
+    - name: Create CNAME File
+      run: echo "www.cltdj.us" > ./dist/CNAME
