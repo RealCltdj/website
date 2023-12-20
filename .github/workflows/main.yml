@@ -20,5 +20,6 @@ jobs:
       run: |
             cd dist
             echo "www.cltdj.us" > CNAME
-            ls
+            git add -A
+            git commit -m 'added CNAME file'
             git push -f https://RealCltdj:${{ secrets.GITHUB_TOKEN }}@github.com/RealCltdj/website.git master:gh-pages
