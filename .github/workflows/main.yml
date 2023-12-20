@@ -12,4 +12,3 @@ jobs:
         username: 'RealCltdj'
         reponame: 'website'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-        gitbranch: 'prod' # defaults to 'gh-pages' but can be changed
