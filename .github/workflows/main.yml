@@ -20,4 +20,4 @@ jobs:
       run: |
             cd dist
             echo "www.cltdj.us" > CNAME
-            git push -f https://RealCltdj:${{ secrets.GITHUB_TOKEN }}@github.com/RealCltdj/website.git
+            git push -f https://RealCltdj:${{ secrets.GITHUB_TOKEN }}@github.com/RealCltdj/website.git master:gh-pages
