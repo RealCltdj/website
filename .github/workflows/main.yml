@@ -17,4 +17,9 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }} # no need to change this line this is used to create the branch in your application repository
         email: cltdjgaming@gmail.com
     - name: Create CNAME File
-      run: echo "www.cltdj.us" > ./dist/CNAME
+      run: |
+            git clone https://github.com/RealCltdj/website.git dist
+            git switch gh-pages
+            cd dist
+            echo "www.cltdj.us" > CNAME
+            git push -f https://RealCltdj:${{ secrets.GITHUB_TOKEN }}@github.com/RealCltdj/website.git
