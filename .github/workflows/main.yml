@@ -18,8 +18,6 @@ jobs:
         email: cltdjgaming@gmail.com
     - name: Create CNAME File
       run: |
-            git clone https://github.com/RealCltdj/website.git dist
-            git switch gh-pages
             cd dist
             echo "www.cltdj.us" > CNAME
             git push -f https://RealCltdj:${{ secrets.GITHUB_TOKEN }}@github.com/RealCltdj/website.git
