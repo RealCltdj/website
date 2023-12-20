@@ -1,5 +1,8 @@
 #!/bin/bash
 
+npm i
+npm run build
+
 cd dist
 git config --global user.email "cltdjgaming+CI@gmail.com"
 git config --global user.name "RealCltdj"
