@@ -31,10 +31,10 @@ import * as fa_free_brands from '@fortawesome/free-brands-svg-icons'
 // import specific icons
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import {  } from '@fortawesome/free-regular-svg-icons'
-import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to library */
-library.add(faUserSecret, faYoutube)
+library.add(faUserSecret, faYoutube, faGithub)
 
 const app = createApp(App)
 
